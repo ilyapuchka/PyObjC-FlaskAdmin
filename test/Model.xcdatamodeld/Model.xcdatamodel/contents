@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1810" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Highlight" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="race" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Race" inverseName="highliths" inverseEntity="Race" syncable="YES"/>
+    </entity>
+    <entity name="Race" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="highliths" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Highlight" inverseName="race" inverseEntity="Highlight" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Highlight" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Race" positionX="160" positionY="192" width="128" height="90"/>
+    </elements>
+</model>
